@@ -24,12 +24,12 @@ struct Node *InsertAtFirst(struct Node *head, int data)
     return ptr;
 }
 
-struct Node * InsertAtIndex(struct Node *head, int data, int index)
+struct Node *InsertAtIndex(struct Node *head, int data, int index)
 {
-    struct Node * ptr = (struct Node *)malloc(sizeof(struct Node));
-    struct Node * p = head;
+    struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
+    struct Node *p = head;
     int i = 0;
-    while (i!=index-1)
+    while (i != index - 1)
     {
         p = p->next;
         i++;
@@ -40,22 +40,23 @@ struct Node * InsertAtIndex(struct Node *head, int data, int index)
     return head;
 }
 
-struct Node * InsertAtEnd(struct Node * head, int data)
+struct Node *InsertAtEnd(struct Node *head, int data)
 {
-   struct Node * ptr = (struct Node *)malloc(sizeof(struct Node));
-   ptr->data = data;
-   struct Node * p = head;
+    struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
+    ptr->data = data;
+    struct Node *p = head;
 
-   while(p->next!=NULL)
-   {
-       p = p->next;
-   }
-   p->next = ptr;
-   ptr->next = NULL;
-   return head;
+    while (p->next != NULL)
+    {
+        p = p->next;
+    }
+    p->next = ptr;
+    ptr->next = NULL;
+    return head;
 }
 
-int main(){
+int main()
+{
     struct Node *head;
     struct Node *second;
     struct Node *third;
@@ -88,6 +89,6 @@ int main(){
     head = InsertAtIndex(head, 3, 2);
     head = InsertAtEnd(head, 10);
     printf("\nLinked list after insertion\n");
-    LinkedListTraversal(head);  
+    LinkedListTraversal(head);
     return 0;
 }

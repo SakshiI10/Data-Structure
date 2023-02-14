@@ -1,8 +1,4 @@
-oid LinkedListTraversal(struct Node *ptr)
-// {
-//     while(ptr != NULL)
-//     {
-//         printf("%d ", ptr -> data);
-//         ptr = ptr->next;
-//     }
-// }
+er(p);
+    // printf("\n");
+    // postOrder(p);
+    // printf

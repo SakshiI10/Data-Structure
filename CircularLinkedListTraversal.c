@@ -39,7 +39,7 @@ int main()
     third->next = fourth;
 
     fourth->data = 66;
-    fourth->next = NULL;
+    fourth->next = head;
 
     LinkedListTraversal(head);
     return 0;
